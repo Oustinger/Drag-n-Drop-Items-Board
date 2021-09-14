@@ -1,0 +1,54 @@
+.control {
+    grid-area: c;
+    display: flex;
+    align-items: center;
+}
+
+.control__button {
+    margin-right: 1rem;
+    padding: 5px 15px;
+    height: fit-content;
+    font-size: 18px;
+    font-family: 'Tahoma', sans-serif;
+
+    border: 1px solid transparent;
+    border-radius: 50px;
+    background-color: #fff;
+
+    cursor: pointer;
+    transition: all ease-out 0.2s;
+
+    -webkit-box-shadow: 0px 0px 2px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 0px 2px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 0px 2px 0px rgba(34, 60, 80, 0.2);
+}
+
+.control__button:hover {
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 0px 5px 2px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 0px 5px 2px rgba(34, 60, 80, 0.2);
+}
+
+.control__button:active {
+    background-color: #eee;
+}
+
+.control__button_file {
+    position: relative;
+    overflow: hidden;
+}
+.control__button input[type='file'] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}

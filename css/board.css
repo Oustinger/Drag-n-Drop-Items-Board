@@ -1,0 +1,22 @@
+.board-container {
+    grid-area: b;
+}
+
+.board-container__title {
+    margin: 0 0 calc(1rem * 1.5) 0;
+    font-size: calc(1rem * 1.5);
+}
+
+.board {
+    position: relative;
+    min-height: calc(100vh - var(--control-height) - 1rem * 9 - calc(1rem * 1.5) * 2);
+
+    border-radius: 1rem;
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(34, 60, 80, 0.2) inset;
+    -moz-box-shadow: 0px 0px 10px 2px rgba(34, 60, 80, 0.2) inset;
+    box-shadow: 0px 0px 10px 2px rgba(34, 60, 80, 0.2) inset;
+}
+
+.board__item {
+    position: absolute !important;
+}

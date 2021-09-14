@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Drag&Drop</title>
+
+        <link href="css/control.css" rel="stylesheet" />
+        <link href="css/board.css" rel="stylesheet" />
+        <link href="css/items.css" rel="stylesheet" />
+        <link href="css/main.css" rel="stylesheet" />
+
+        <script defer type="text/javascript" src="script/itemsList.js"></script>
+        <script defer type="text/javascript" src="script/board.js"></script>
+        <script defer type="text/javascript" src="script/main.js"></script>
+    </head>
+    <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="root">
+            <div class="app">
+                <section class="control">
+                    <button class="control__button import" type="button"><b>Import</b></button>
+                    <button class="control__button control__button_file">
+                        <b>Export</b>
+                        <input type="file" id="export-input" />
+                    </button>
+                </section>
+                <section class="board-container block">
+                    <h2 class="board-container__title">Board items</h2>
+                    <div class="board"></div>
+                </section>
+                <section class="items block">
+                    <h2 class="items__title">Items List</h2>
+
+                    <ul class="items__list">
+                        <li class="items__item" data-id="1">
+                            <img class="items__item-img" src="./img/1.jfif" alt="item image" />
+                            <span class="items__item-text">Chair 1</span>
+                        </li>
+                        <li class="items__item" data-id="2">
+                            <img class="items__item-img" src="./img/2.jfif" alt="item image" />
+                            <span class="items__item-text">Chair 2</span>
+                        </li>
+                        <li class="items__item" data-id="3">
+                            <img class="items__item-img" src="./img/3.jfif" alt="item image" />
+                            <span class="items__item-text">Chair 3</span>
+                        </li>
+                        <li class="items__item" data-id="4">
+                            <img class="items__item-img" src="./img/4.jfif" alt="item image" />
+                            <span class="items__item-text">Chair 4</span>
+                        </li>
+                        <li class="items__item" data-id="5">
+                            <img class="items__item-img" src="./img/5.jfif" alt="item image" />
+                            <span class="items__item-text">Chair 5</span>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </body>
+</html>
