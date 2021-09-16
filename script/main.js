@@ -9,14 +9,22 @@ const state = {
 };
 
 const importBoardState = () => {
-    var blob = new Blob([JSON.stringify(state.boardState, null, 2)], { type: 'application/json;charset=utf-8' });
-    var url = URL.createObjectURL(blob);
-    var elem = document.createElement('a');
-    elem.href = url;
-    elem.download = `boardState_${Date.now()}`;
-    document.body.appendChild(elem);
-    elem.click();
-    document.body.removeChild(elem);
+    function createFile() {
+        return new Blob([JSON.stringify(state.boardState, null, 2)], { type: 'application/json;charset=utf-8' });
+    }
+
+    function downloadFile(file) {
+        var url = URL.createObjectURL(file);
+        var elem = document.createElement('a');
+        elem.href = url;
+        elem.download = `boardState_${Date.now()}`;
+        document.body.appendChild(elem);
+        elem.click();
+        document.body.removeChild(elem);
+    }
+
+    var file = createFile();
+    downloadFile(file);
 };
 
 const replaceChildToBoard = (boardItems) => {
@@ -115,3 +123,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // Экспорт board state из файла
     document.querySelector('#export-input').addEventListener('change', exportBoardState);
 });
+
